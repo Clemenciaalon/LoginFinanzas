@@ -1,0 +1,83 @@
+<body>
+  <h1>&nbsp;</h1>
+  <!--
+  <div align="center">
+    <h1 class="text">Iniciar sesión</h1>
+    <h1>&nbsp;</h1>
+    <form (submit)="inicio()" id="myform" class="form">
+      <input
+        type="text"
+        #nom
+        name="nom"
+        placeholder="Username"
+        required
+        autofocus
+        [(ngModel)]="usuario.nom"
+      />
+      <h6></h6>
+      <input
+        type="password"
+        [(ngModel)]="usuario.pwd"
+        #pwd
+        name="pwd"
+        placeholder="Password"
+        required
+      />
+      <h1>&nbsp;</h1>
+      <input type="submit" class="btn btn-outline-light" value="Login" />
+    </form>
+  </div>-->
+  <body>
+    <div *ngIf="exist(); else loginForm"></div>
+    <ng-template #loginForm>
+      <div class="container" align="center">
+        <section id="content">
+          <h5>&nbsp;</h5>
+          <h1 align="center">Bienvenido</h1>
+          <form (submit)="inicio()" id="myform" class="form">
+            <div>
+              <h1>&nbsp;</h1>
+
+              <input
+                type="text"
+                #nom
+                name="nom"
+                placeholder="Usuario"
+                required
+                autofocus
+                [(ngModel)]="usuario.nom"
+              />
+            </div>
+            <h5>&nbsp;</h5>
+            <div>
+              <input
+                type="password"
+                [(ngModel)]="usuario.pwd"
+                #pwd
+                name="pwd"
+                placeholder="Contraseña"
+                required
+              />
+              <h1>&nbsp;</h1>
+            </div>
+
+            <!-- form -->
+            <div class="button">
+              <input class="btn btn-light" type="submit" value="Entrar" />
+              <h1>&nbsp;</h1>
+            </div>
+          </form>
+          <!-- button -->
+        </section>
+        <!-- content -->
+      </div>
+      <!-- container -->
+    </ng-template>
+  </body>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+  <h1>&nbsp;</h1>
+</body>
